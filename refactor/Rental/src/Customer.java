@@ -23,8 +23,6 @@ public class Customer {
      * @return
      */
     public String statement() {
-        double totalAmount = 0;
-        int renterPoints = 0;
         Enumeration<Rental> rentals = _rentals.elements();
         String result = "Rental Record for " + getName() + "\n";
         while (rentals.hasMoreElements()) {
@@ -39,6 +37,28 @@ public class Customer {
         result += "You earned " + String.valueOf(getRenterPoints()) + " renter points.";
         return result;
     }
+
+    /**
+     * 生成HTML报表
+     *
+     * @return
+     */
+    public String HTMLStatement() {
+        Enumeration<Rental> rentals = _rentals.elements();
+        String result = "<h1>Rental Record for <em>" + getName() + "</em></h1><p>\n";
+        while (rentals.hasMoreElements()) {
+            Rental each = rentals.nextElement();
+
+            //show figures for this rental
+            result += "\t" + each.getMovie().getTitle() + "\t" + String.valueOf(each.getThisAmount()) + "\n";
+
+        }
+        // add footer lines
+        result += "<p>Amount owed is <em>" + String.valueOf(getTotalAmount()) + "</em><p>\n";
+        result += "You earned <em>" + String.valueOf(getRenterPoints()) + "</em> renter points.";
+        return result;
+    }
+
 
     private double getTotalAmount() {
         double totalAmount;
