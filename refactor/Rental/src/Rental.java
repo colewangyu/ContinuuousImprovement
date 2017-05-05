@@ -36,11 +36,10 @@ public class Rental {
         return thisAmount;
     }
 
-    public int getRenterPoints(int renterPoints) {
-        // add renter points
-        renterPoints++;
-        // add bonus for a two day new release rental
-        if ((getMovie().getPriceCode() == Movie.NEW_RELEASE) && getDaysRented() > 1) renterPoints++;
-        return renterPoints;
+    public int getRenterPoints() {
+        if ((getMovie().getPriceCode() == Movie.NEW_RELEASE) && getDaysRented() > 1)
+            return 2;
+        else
+            return 1;
     }
 }
