@@ -17,9 +17,9 @@ public class RentalTest {
         c1 = new Customer("C1");
         c2 = new Customer("C2");
         c3 = new Customer("C3");
-        m1 = new Movie("m1", 1);
-        m2 = new Movie("m2", 2);
-        m3 = new Movie("m3", 0);
+        m1 = new NewReleaseMovie("m1", 1);
+        m2 = new ChildMovie("m2", 2);
+        m3 = new RegularMovie("m3", 0);
         r1 = new Rental(m1, 2);
         r2 = new Rental(m2, 1);
         r3 = new Rental(m3, 2);

@@ -81,7 +81,7 @@ public class Customer {
         rentals = _rentals.elements();
         while (rentals.hasMoreElements()) {
             each = rentals.nextElement();
-            renterPoints += each.getRenterPoints();
+            renterPoints += each.getMovie().getRenterPoints(each.getDaysRented());
         }
         return renterPoints;
     }

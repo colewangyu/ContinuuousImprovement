@@ -15,12 +15,7 @@ public class Rental {
         return _daysRented;
     }
 
-    public int getRenterPoints() {
-        if ((getMovie().getPriceCode() == Movie.NEW_RELEASE) && getDaysRented() > 1)
-            return 2;
-        else
-            return 1;
-    }
+
 
     public double getThisAmount() {
         // determine amounts for each line
