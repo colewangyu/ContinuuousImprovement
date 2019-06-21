@@ -11,7 +11,7 @@ public class Customer {
 
     public String getName() {
         return _name;
-    } 
+    }
 
     public void addRental(Rental rental) {
         this._rentals.addElement(rental);
