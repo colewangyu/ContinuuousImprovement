@@ -16,7 +16,7 @@ public class Customer {
     public void addRental(Rental rental) {
         this._rentals.addElement(rental);
     }
- 
+
     /**
      * 生成报表
      *
