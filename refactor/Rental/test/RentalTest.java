@@ -27,7 +27,7 @@ public class RentalTest {
 
     @After
     public void tearDown() throws Exception {
-
+        // clear resources here
     }
 
     @Test
